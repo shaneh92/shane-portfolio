@@ -1,24 +1,29 @@
 import { createTheme } from "@mui/material";
 
-const customTheme = createTheme({
+export const theme = createTheme({
   palette: {
     primary: {
-      main: "#ffffff",
+      main: "#090808",
+      light: "#1F1E1E",
     },
     secondary: {
-      main: "#41FFC9",
+      main: "#13211D",
     },
   },
   typography: {
     fontFamily: "Montserrat",
     h1: {
       fontFamily: "Montserrat",
+      color: "41FFC9",
     },
     h2: {
       fontFamily: "Montserrat",
+      color: "white",
     },
     h3: {
       fontFamily: "Montserrat",
+      color: "white",
+      textTransform: "uppercase",
     },
     h4: {
       fontFamily: "Montserrat",
@@ -40,7 +45,11 @@ const customTheme = createTheme({
     },
     body1: {
       fontFamily: "Montserrat",
+      color: "ffffff",
+    },
+    body2: {
+      fontFamily: "Montserrat",
+      color: "#41FFC9",
     },
   },
 });
-export default customTheme;
