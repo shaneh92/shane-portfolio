@@ -2,6 +2,7 @@ import { useTheme, Paper, Container } from "@mui/material";
 import ResponsiveAppBar from "./components/Header/Header.tsx";
 import wireframebackground from "./assets/wireframebackground.png";
 import "./App.css";
+import Home from "./pages/Home.tsx";
 
 function App() {
   const { typography, palette } = useTheme();
@@ -22,9 +23,7 @@ function App() {
           }}
         >
           <ResponsiveAppBar />
-          <p className="read-the-docs">
-            Click on the Vite and React logos to learn more
-          </p>
+          <Home />
         </Container>
       </Paper>
     </>

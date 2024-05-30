@@ -27,6 +27,8 @@ export const theme = createTheme({
     },
     h4: {
       fontFamily: "Montserrat",
+      color: "white",
+      fontSize: "15px",
     },
     h5: {
       fontFamily: "Montserrat",
