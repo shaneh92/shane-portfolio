@@ -1,11 +1,12 @@
 import { useTheme, Paper, Container } from "@mui/material";
 import ResponsiveAppBar from "./components/Header/Header.tsx";
-import wireframebackground from "./assets/wireframebackground.png";
+import wireframebackground from "../public/wireframebackground.png";
 import "./App.css";
 import Home from "./pages/Home.tsx";
 
 function App() {
   const { typography, palette } = useTheme();
+
   return (
     <>
       <Paper
@@ -17,9 +18,9 @@ function App() {
         <Container
           sx={{
             backgroundImage: `url(${wireframebackground})`,
-            backgroundRepeat: "no-repeat",
+            backgroundRepeat: "repeat",
             backgroundSize: "cover",
-            height: "100vh",
+            minHeight: "100%",
           }}
         >
           <ResponsiveAppBar />

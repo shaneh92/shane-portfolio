@@ -36,7 +36,7 @@ function ResponsiveAppBar() {
           <img
             src={logo}
             alt="logo"
-            style={{ height: "30px", width: "30px" }}
+            style={{ height: "30px", width: "30px", marginRight: "60px" }}
           />
 
           <Box

@@ -26,13 +26,15 @@ export const theme = createTheme({
     },
     h3: {
       fontFamily: "Montserrat",
-      color: "#ffffff",
+      color: "#41FFC9",
       textTransform: "uppercase",
+      fontSize: "20px",
     },
     h4: {
       fontFamily: "Montserrat",
       color: "#ffffff",
       fontSize: "15px",
+      fontWeight: 200,
     },
     h5: {
       fontFamily: "Montserrat",
@@ -53,6 +55,8 @@ export const theme = createTheme({
     body1: {
       fontFamily: "Montserrat",
       color: "#ffffff",
+      fontSize: "20px",
+      fontWeight: 200,
     },
     body2: {
       fontFamily: "Montserrat",

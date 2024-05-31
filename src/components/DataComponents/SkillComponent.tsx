@@ -5,7 +5,7 @@ interface SkillComponentProps {
   title: string;
 }
 
-export default function SkillsComponent({ image, title }: SkillComponentProps) {
+export default function SkillsComponent(props: SkillComponentProps) {
   const { palette } = useTheme();
   return (
     <Box
@@ -15,20 +15,19 @@ export default function SkillsComponent({ image, title }: SkillComponentProps) {
         borderRadius: "5px",
         display: "flex",
         alignItems: "center",
-        padding: "10px",
-        margin: "10px",
-        width: "200px",
+        padding: "8px",
+        width: "250px",
         height: "50px",
         textAlign: "center",
       }}
     >
       <img
-        src={image}
-        alt={title}
+        src={props.image}
+        alt={props.title}
         style={{ width: "30px", marginLeft: "10px" }}
       />
       <Typography variant="h4" sx={{ margin: "5px 20px 5px 20px" }}>
-        {title}
+        {props.title}
       </Typography>
     </Box>
   );

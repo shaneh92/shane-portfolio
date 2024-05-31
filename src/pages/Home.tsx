@@ -3,6 +3,7 @@ import SkillsComponent from "../components/DataComponents/SkillComponent";
 import { skillList } from "../data/skillList";
 import arrow from "../assets/arrow.png";
 import shanePhoto from "../assets/shane-photo.png";
+import QuickLinksComponent from "../components/DataComponents/QuickLinksComponent";
 
 export default function Home() {
   const wordHighlight = {
@@ -50,14 +51,20 @@ export default function Home() {
             </Box>
           </Grid>
           <Grid item xs={4} md={4} order={{ xs: 1, md: 2 }}>
-            <img
-              src={shanePhoto}
-              alt="check this guy out"
-              style={{ width: "100%", height: "auto" }}
-            />
+            <Box display="flex" justifyContent="flex-end">
+              <img
+                src={shanePhoto}
+                alt="check this guy out"
+                style={{ maxWidth: "95%", height: "auto" }}
+              />
+            </Box>
           </Grid>
         </Grid>
-        <Box sx={{ mt: "100px" }}>
+        <Grid>
+          <QuickLinksComponent />
+        </Grid>
+
+        <Box sx={{ mt: "102px" }}>
           <Grid container spacing={2}>
             {skillList.map((skill, index) => (
               <Grid item xs={12} sm={6} md={3} key={index}>
