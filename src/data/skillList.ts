@@ -3,7 +3,12 @@ import reactLogo from "../assets/react-logo.png";
 import cssLogo from "../assets/css-logo.png";
 import autocadLogo from "../assets/autocad-logo.png";
 
-export const skillList = [
+interface SkillList {
+  title: string;
+  image: string;
+}
+
+export const skillList: SkillList[] = [
   {
     title: "JavaScript",
     image: javascriptLogo,
