@@ -1,8 +1,9 @@
 import { useTheme, Paper, Container } from "@mui/material";
 import ResponsiveAppBar from "./components/Header/Header.tsx";
-import wireframebackground from "../public/wireframebackground.png";
+import wireframebackground from "/wireframebackground.png";
 import "./App.css";
-import Home from "./pages/Home.tsx";
+// import Home from "./pages/Home.tsx";
+import Resume from "./pages/Resume.tsx";
 
 function App() {
   const { typography, palette } = useTheme();
@@ -24,7 +25,8 @@ function App() {
           }}
         >
           <ResponsiveAppBar />
-          <Home />
+          {/* <Home /> */}
+          <Resume />
         </Container>
       </Paper>
     </>
