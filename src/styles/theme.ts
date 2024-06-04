@@ -8,6 +8,7 @@ export const theme = createTheme({
     },
     secondary: {
       main: "#13211D",
+      light: "#41FFC9",
     },
   },
   typography: {
@@ -38,6 +39,9 @@ export const theme = createTheme({
     },
     h5: {
       fontFamily: "Montserrat",
+      color: "#ffffff",
+      fontSize: "31px",
+      fontWeight: 200,
     },
     h6: {
       fontFamily: "Montserrat",
@@ -61,6 +65,26 @@ export const theme = createTheme({
     body2: {
       fontFamily: "Montserrat",
       color: "#41FFC9",
+    },
+  },
+  components: {
+    MuiCard: {
+      styleOverrides: {
+        root: {
+          backgroundColor: "#13211D",
+          borderRadius: "5px",
+          boxShadow: "0 0 16px rgba(0, 0, 0, 0.7)",
+          marginTop: "50px",
+          marginBottom: "50px",
+        },
+      },
+    },
+    MuiListItem: {
+      styleOverrides: {
+        root: {
+          // TODO: See if we can shrink the padding on the List
+        },
+      },
     },
   },
 });

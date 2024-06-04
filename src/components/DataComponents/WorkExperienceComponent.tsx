@@ -19,7 +19,7 @@ export default function WorkExperienceComponent(
       <Typography variant="h1">{props.position}</Typography>
       <Typography variant="h1">{props.startDate}</Typography>
       <Typography variant="h1">{props.endDate}</Typography>
-      <Typography variant="body1">{props.description}</Typography>
+      {/* <Typography variant="body1">{props.description}</Typography> */}
     </>
   );
 }

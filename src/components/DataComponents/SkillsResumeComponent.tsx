@@ -1,7 +1,7 @@
 import { Typography } from "@mui/material";
 
 interface SkillComponentProps {
-  skill: string[];
+  skill: string;
 }
 
 export default function SkillsResumeComponent(props: SkillComponentProps) {

@@ -4,7 +4,7 @@ interface SkillComponentProps {
   image: string;
   title: string;
 }
-
+// TODO: Consider using a Card component instead of a Box component
 export default function SkillsComponent(props: SkillComponentProps) {
   const { palette } = useTheme();
   return (

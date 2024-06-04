@@ -1,4 +1,4 @@
-import { Box, Container, Grid, Typography } from "@mui/material";
+import { Box, Container, Grid, Typography, useTheme } from "@mui/material";
 import SkillsComponent from "../components/DataComponents/SkillComponent";
 import { skillList } from "../data/skillList";
 import arrow from "../assets/arrow.png";
@@ -6,8 +6,9 @@ import shanePhoto from "../assets/shane-photo.png";
 import QuickLinksComponent from "../components/DataComponents/QuickLinksComponent";
 
 export default function Home() {
+  const { palette } = useTheme();
   const wordHighlight = {
-    color: "#41FFC9",
+    color: palette.secondary.light,
   };
   return (
     <>
