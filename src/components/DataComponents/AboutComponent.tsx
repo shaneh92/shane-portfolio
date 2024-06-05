@@ -1,6 +1,7 @@
 import {
   Avatar,
   Box,
+  Button,
   Card,
   CardContent,
   Grid,
@@ -8,6 +9,7 @@ import {
   Typography,
   useTheme,
 } from "@mui/material";
+import shaneResume from "../../assets/shane-hingtgen-resume2024.pdf";
 
 interface AboutComponentProps {
   image: string;
@@ -21,6 +23,7 @@ export default function AboutComponent(props: AboutComponentProps) {
   const wordHighlight = {
     color: palette.secondary.dark,
   };
+
   return (
     <>
       <Box>
@@ -56,11 +59,30 @@ export default function AboutComponent(props: AboutComponentProps) {
             >
               {props.email}
             </Link>
+            <Box sx={{ marginTop: "1em" }}>
+              <Button
+                href={shaneResume}
+                variant="contained"
+                target="_blank"
+                sx={{
+                  backgroundColor: palette.secondary.main,
+                  color: palette.secondary.dark,
+                }}
+              >
+                Download Resume
+              </Button>
+            </Box>
           </Grid>
         </Grid>
         <Card>
           <CardContent>
-            <Typography variant="h3" sx={{ color: palette.secondary.light }}>
+            <Typography
+              variant="h3"
+              sx={{
+                color: palette.secondary.light,
+                textTransform: "capitalize",
+              }}
+            >
               About Me
             </Typography>
             <Typography variant="body1">

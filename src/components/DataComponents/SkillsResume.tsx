@@ -18,7 +18,10 @@ export default function SkillsResume() {
   return (
     <Card>
       <CardContent>
-        <Typography variant="h3" sx={{ color: palette.secondary.light }}>
+        <Typography
+          variant="h3"
+          sx={{ color: palette.secondary.dark, textTransform: "capitalize" }}
+        >
           Skills
         </Typography>
         <Grid container spacing={2}>

@@ -17,7 +17,10 @@ export default function EducationResume() {
   return (
     <Card>
       <CardContent>
-        <Typography variant="h3" sx={{ color: palette.secondary.light }}>
+        <Typography
+          variant="h3"
+          sx={{ color: palette.secondary.light, textTransform: "capitalize" }}
+        >
           Education
         </Typography>
 

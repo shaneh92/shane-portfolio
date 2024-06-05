@@ -21,9 +21,10 @@ export default function Resume() {
   );
 }
 /**TODO:
- * 1. Fix the font sizes
- * 2. Fix the gap in SkillsResume
- * 3. Add Download Resume Button
- * 4. Add Routes
- * 5. fix white space around application
+ * 1. Fix the font sizes for list items
+ * 2. Fix the gap in SkillsResume list items
+ * 3. Add Routes
+ * 4. fix white space around application
+ * 5. Add styles to drop down menu
+ * 6. fix education and skills card to be even at bottom
  */
