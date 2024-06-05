@@ -9,10 +9,10 @@ export default function Resume() {
     <Container>
       <AboutResume />
       <Grid container spacing={2}>
-        <Grid item xs={12} md={6}>
+        <Grid item xs={12} md={7}>
           <EducationResume />
         </Grid>
-        <Grid item xs={12} md={6}>
+        <Grid item xs={12} md={5}>
           <SkillsResume />
         </Grid>
       </Grid>
@@ -20,3 +20,10 @@ export default function Resume() {
     </Container>
   );
 }
+/**TODO:
+ * 1. Fix the font sizes
+ * 2. Fix the gap in SkillsResume
+ * 3. Add Download Resume Button
+ * 4. Add Routes
+ * 5. fix white space around application
+ */

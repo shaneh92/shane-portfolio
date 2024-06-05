@@ -19,7 +19,7 @@ interface AboutComponentProps {
 export default function AboutComponent(props: AboutComponentProps) {
   const { palette } = useTheme();
   const wordHighlight = {
-    color: palette.secondary.light,
+    color: palette.secondary.dark,
   };
   return (
     <>
@@ -38,13 +38,17 @@ export default function AboutComponent(props: AboutComponentProps) {
               sx={{
                 height: "200px",
                 width: "200px",
-                border: `5px solid ${palette.secondary.light}`,
+                border: `5px solid ${palette.secondary.dark}`,
               }}
             />
           </Grid>
           <Grid item>
-            <Typography variant="h1">{props.name}</Typography>
-            <Typography variant="h2">{props.title}</Typography>
+            <Typography variant="h1" sx={{ color: palette.secondary.dark }}>
+              {props.name}
+            </Typography>
+            <Typography variant="h1" sx={{ color: palette.secondary.light }}>
+              {props.title}
+            </Typography>
             <Link
               href={`mailto:${props.email}`}
               variant="h5"
@@ -56,7 +60,9 @@ export default function AboutComponent(props: AboutComponentProps) {
         </Grid>
         <Card>
           <CardContent>
-            <Typography variant="h2">About Me</Typography>
+            <Typography variant="h3" sx={{ color: palette.secondary.light }}>
+              About Me
+            </Typography>
             <Typography variant="body1">
               Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at
               ipsum sit amet mi convallis pharetra id

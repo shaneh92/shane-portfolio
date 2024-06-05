@@ -25,7 +25,11 @@ export default function QuickLinkComponent(props: QuickLinkComponentProps) {
             <Grid item xs={10}>
               <Typography
                 variant="h3"
-                sx={{ textAlign: "justify", textTransform: "none" }}
+                sx={{
+                  textAlign: "justify",
+                  textTransform: "none",
+                  color: palette.secondary.dark,
+                }}
               >
                 {props.title}
               </Typography>

@@ -1,37 +1,52 @@
 import EducationComponent from "./EducationComponent";
 import AwardsComponent from "./AwardsComponent.tsx";
 import { resume } from "../../data/resume.ts";
-import { Card, CardContent, List, ListItem, ListItemIcon } from "@mui/material";
+import {
+  Card,
+  CardContent,
+  List,
+  ListItem,
+  ListItemIcon,
+  Typography,
+  useTheme,
+} from "@mui/material";
 import CircleIcon from "@mui/icons-material/Circle";
 
 export default function EducationResume() {
+  const { palette } = useTheme();
   return (
-    <>
-      <Card>
-        <CardContent>
-          {resume.education.map((item) => {
-            return (
-              <EducationComponent
-                key={`${item.school}-${item.graduationYear}-${item.degree}`}
-                {...item}
-              />
-            );
-          })}
+    <Card>
+      <CardContent>
+        <Typography variant="h3" sx={{ color: palette.secondary.light }}>
+          Education
+        </Typography>
 
-          <List>
-            {resume.education.map((item, index) => {
-              return (
-                <ListItem>
-                  <ListItemIcon>
-                    <CircleIcon sx={{ color: "white", fontSize: "6px" }} />
-                  </ListItemIcon>
-                  <AwardsComponent key={index} {...item} />
-                </ListItem>
-              );
-            })}
-          </List>
-        </CardContent>
-      </Card>
-    </>
+        {resume.education.map((item) => {
+          return (
+            <ListItem disableGutters>
+              <EducationComponent
+                key={`${item.school}-${item.degree}-${item.graduationYear}`}
+                school={item.school}
+                degree={item.degree}
+                graduationYear={item.graduationYear}
+              />
+            </ListItem>
+          );
+        })}
+
+        {resume.education.map((item, index) => {
+          return (
+            <ListItem>
+              <ListItemIcon>
+                <CircleIcon
+                  sx={{ color: palette.secondary.light, fontSize: "6px" }}
+                />
+              </ListItemIcon>
+              <AwardsComponent key={index} {...item} />
+            </ListItem>
+          );
+        })}
+      </CardContent>
+    </Card>
   );
 }

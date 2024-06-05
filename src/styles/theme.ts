@@ -8,26 +8,24 @@ export const theme = createTheme({
     },
     secondary: {
       main: "#13211D",
-      light: "#41FFC9",
+      light: "#ffffff",
+      dark: "#41FFC9",
     },
   },
   typography: {
     fontFamily: "Montserrat",
     h1: {
       fontFamily: "Montserrat",
-      color: "#41FFC9",
       fontSize: "50px",
       fontWeight: 500,
     },
     h2: {
       fontFamily: "Montserrat",
-      color: "#ffffff",
       fontSize: "50px",
       fontWeight: 500,
     },
     h3: {
       fontFamily: "Montserrat",
-      color: "#41FFC9",
       textTransform: "uppercase",
       fontSize: "20px",
     },
@@ -82,7 +80,15 @@ export const theme = createTheme({
     MuiListItem: {
       styleOverrides: {
         root: {
-          // TODO: See if we can shrink the padding on the List
+          paddingTop: "0px",
+          paddingBottom: "0px",
+        },
+      },
+    },
+    MuiListItemIcon: {
+      styleOverrides: {
+        root: {
+          minWidth: "20px",
         },
       },
     },

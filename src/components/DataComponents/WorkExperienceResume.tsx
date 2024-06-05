@@ -5,35 +5,28 @@ import {
   ListItem,
   ListItemIcon,
   ListItemText,
+  Typography,
+  useTheme,
 } from "@mui/material";
 import { resume } from "../../data/resume";
 import WorkExperienceComponent from "./WorkExperienceComponent";
 import CircleIcon from "@mui/icons-material/Circle";
 
 export default function WorkExperienceResume() {
+  const { palette } = useTheme();
   return (
-    <>
-      {resume.workExperience.map((item) => {
-        return (
-          <Card
+    <Card>
+      <CardContent>
+        <Typography variant="h3" sx={{ color: palette.secondary.light }}>
+          Work Experience
+        </Typography>
+        {resume.workExperience.map((item) => (
+          <WorkExperienceComponent
+            {...item}
             key={`${item.company}-${item.position}-${item.startDate}-${item.endDate}`}
-          >
-            <CardContent>
-              <WorkExperienceComponent {...item} />
-              <List>
-                {item.description.map((desc, index) => (
-                  <ListItem key={index}>
-                    <ListItemIcon>
-                      <CircleIcon sx={{ color: "white", fontSize: "6px" }} />
-                    </ListItemIcon>
-                    <ListItemText primary={desc} />
-                  </ListItem>
-                ))}
-              </List>
-            </CardContent>
-          </Card>
-        );
-      })}
-    </>
+          />
+        ))}
+      </CardContent>
+    </Card>
   );
 }

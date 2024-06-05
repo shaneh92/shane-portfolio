@@ -8,15 +8,17 @@ import QuickLinksComponent from "../components/DataComponents/QuickLinksComponen
 export default function Home() {
   const { palette } = useTheme();
   const wordHighlight = {
-    color: palette.secondary.light,
+    color: palette.secondary.dark,
   };
   return (
     <>
       <Container>
         <Grid container spacing={2}>
           <Grid item xs={12} md={8} order={{ xs: 2, md: 1 }}>
-            <Typography variant="h1">Shane Hingtgen,</Typography>
-            <Typography variant="h2">
+            <Typography variant="h1" sx={{ color: palette.secondary.dark }}>
+              Shane Hingtgen,
+            </Typography>
+            <Typography variant="h1" sx={{ color: palette.secondary.light }}>
               <img
                 src={arrow}
                 alt="right arrow"

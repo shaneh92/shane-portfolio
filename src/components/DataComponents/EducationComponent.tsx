@@ -1,4 +1,11 @@
-import { Typography } from "@mui/material";
+import {
+  List,
+  ListItem,
+  ListItemIcon,
+  Typography,
+  useTheme,
+} from "@mui/material";
+import CircleIcon from "@mui/icons-material/Circle";
 
 interface EducationComponentProps {
   school: string;
@@ -7,12 +14,25 @@ interface EducationComponentProps {
 }
 
 export default function EducationComponent(props: EducationComponentProps) {
+  const { palette } = useTheme();
   return (
-    <>
-      <Typography variant="h2">Education</Typography>
-      <Typography variant="h1">{props.school}</Typography>
-      <Typography variant="h1">{props.graduationYear}</Typography>
-      <Typography variant="body1">{props.degree}</Typography>
-    </>
+    <List>
+      <ListItem>
+        <ListItemIcon>
+          <CircleIcon
+            sx={{ color: palette.secondary.light, fontSize: "6px" }}
+          />
+        </ListItemIcon>
+        <Typography variant="body1">{props.school}</Typography>
+      </ListItem>
+      <ListItem>
+        <ListItemIcon>
+          {/**No Icon so we are aligned with other points*/}
+        </ListItemIcon>
+        <Typography variant="body1" sx={{ color: palette.secondary.dark }}>
+          {props.degree} ({props.graduationYear})
+        </Typography>
+      </ListItem>
+    </List>
   );
 }
