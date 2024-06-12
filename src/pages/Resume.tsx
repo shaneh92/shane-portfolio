@@ -27,4 +27,6 @@ export default function Resume() {
  * 4. fix white space around application
  * 5. Add styles to drop down menu
  * 6. fix education and skills card to be even at bottom
+ * 7. Fix hamburger menu to be on the right side
+ * 8. Fix skills list on home page to not overlap when screen shrinks
  */

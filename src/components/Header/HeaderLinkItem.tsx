@@ -22,9 +22,6 @@ export default function HeaderLinkItem(props: HeaderLinkItemProps) {
             currentPath === props.to
               ? palette.secondary.dark
               : palette.secondary.light,
-          "&:hover": {
-            color: palette.secondary.main,
-          },
         }}
       >
         {props.title}

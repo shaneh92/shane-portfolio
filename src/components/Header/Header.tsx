@@ -10,10 +10,14 @@ import MenuItem from "@mui/material/MenuItem";
 import dropdown from "../../assets/dropdown.png";
 import logo from "../../assets/sh-logo.png";
 import HeaderLinkItem from "./HeaderLinkItem";
+import { Link, Typography, useTheme } from "@mui/material";
+import GitHubIcon from "@mui/icons-material/GitHub";
+import LinkedInIcon from "@mui/icons-material/LinkedIn";
 
 const pages = ["Home", "Resume", "Projects", "Databases", "API", "About"];
 
 function Header() {
+  const { palette } = useTheme();
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
     null
   );
@@ -76,19 +80,87 @@ function Header() {
               onClose={handleCloseNavMenu}
               sx={{
                 display: { xs: "block", md: "none" },
+                "& .MuiPaper-root": {
+                  backgroundColor: palette.primary.main,
+                  borderRadius: "12px",
+                },
               }}
             >
-              {pages.map((page) => (
-                <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <HeaderLinkItem to={`/${page}`} title={page} />
-                </MenuItem>
-              ))}
+              <Box display="flex" alignItems="center" sx={{ margin: "20px" }}>
+                <img
+                  src={logo}
+                  alt="logo"
+                  style={{
+                    height: "30px",
+                    width: "30px",
+                    marginRight: "15px",
+                    marginLeft: "10px",
+                  }}
+                />
+                <Typography variant="h4">Shane Hingtgen</Typography>
+              </Box>
+              <Box
+                sx={{
+                  backgroundColor: palette.secondary.main,
+                }}
+              >
+                {pages.map((page) => (
+                  <MenuItem
+                    key={page}
+                    onClick={handleCloseNavMenu}
+                    sx={{
+                      padding: "20px",
+                      pl: "30px",
+                      "&:hover": {
+                        backgroundColor: palette.primary.main,
+                      },
+                    }}
+                  >
+                    <HeaderLinkItem to={`/${page}`} title={page} />
+                  </MenuItem>
+                ))}
+              </Box>
+              <Box display="flex" alignItems="center" sx={{ margin: "20px" }}>
+                <Link
+                  href="https://github.com/shaneh92"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="GitHub profile"
+                >
+                  <Box display="flex" alignItems="center" sx={{ mr: "25px" }}>
+                    <GitHubIcon
+                      sx={{ color: "white", mr: "10px", fontSize: 40 }}
+                    />
+                    <Typography variant="h4"> Github</Typography>
+                  </Box>
+                </Link>
+                <Link
+                  href="https://www.linkedin.com/in/shane-hingtgen/ "
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  aria-label="LinkedIn profile"
+                >
+                  <Box display="flex" alignItems="center">
+                    <LinkedInIcon
+                      sx={{ color: "white", mr: "10px", fontSize: 40 }}
+                    />
+                    <Typography variant="h4">LinkedIn </Typography>
+                  </Box>
+                </Link>
+              </Box>
             </Menu>
           </Box>
 
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map((page) => (
-              <Button variant="text">
+              <Button
+                variant="text"
+                sx={{
+                  "&:hover": {
+                    backgroundColor: palette.secondary.main,
+                  },
+                }}
+              >
                 <HeaderLinkItem to={`/${page}`} title={page} key={page} />
               </Button>
             ))}
