@@ -23,7 +23,7 @@ export default function Resume() {
 /**TODO:
  * 1. Fix the font sizes for list items
  * 2. Fix the gap in SkillsResume list items
- * 3. Add Routes
+ * 3. Fix the header not highlighting when we click the buttons on the home page to navigate
  * 4. fix white space around application
  * 5. Add styles to drop down menu
  * 6. fix education and skills card to be even at bottom

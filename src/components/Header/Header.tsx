@@ -3,17 +3,17 @@ import AppBar from "@mui/material/AppBar";
 import Box from "@mui/material/Box";
 import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
-import Typography from "@mui/material/Typography";
 import Menu from "@mui/material/Menu";
 import Container from "@mui/material/Container";
 import Button from "@mui/material/Button";
 import MenuItem from "@mui/material/MenuItem";
 import dropdown from "../../assets/dropdown.png";
 import logo from "../../assets/sh-logo.png";
+import HeaderLinkItem from "./HeaderLinkItem";
 
 const pages = ["Home", "Resume", "Projects", "Databases", "API", "About"];
 
-function ResponsiveAppBar() {
+function Header() {
   const [anchorElNav, setAnchorElNav] = React.useState<null | HTMLElement>(
     null
   );
@@ -80,7 +80,7 @@ function ResponsiveAppBar() {
             >
               {pages.map((page) => (
                 <MenuItem key={page} onClick={handleCloseNavMenu}>
-                  <Typography textAlign="center">{page}</Typography>
+                  <HeaderLinkItem to={`/${page}`} title={page} />
                 </MenuItem>
               ))}
             </Menu>
@@ -88,12 +88,8 @@ function ResponsiveAppBar() {
 
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map((page) => (
-              <Button
-                key={page}
-                onClick={handleCloseNavMenu}
-                sx={{ my: 2, color: "white", display: "block" }}
-              >
-                {page}
+              <Button variant="text">
+                <HeaderLinkItem to={`/${page}`} title={page} key={page} />
               </Button>
             ))}
           </Box>
@@ -102,4 +98,4 @@ function ResponsiveAppBar() {
     </AppBar>
   );
 }
-export default ResponsiveAppBar;
+export default Header;

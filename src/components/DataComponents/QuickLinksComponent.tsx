@@ -7,6 +7,7 @@ export default function QuickLinksComponent() {
     <Grid container spacing={2}>
       <Grid item xs={12} md={6}>
         <QuickLinkComponent
+          to={"/resume"}
           title={"Resume"}
           image={arrow}
           description={"Click to view resume or download a PDF"}
@@ -14,6 +15,7 @@ export default function QuickLinksComponent() {
       </Grid>
       <Grid item xs={12} md={6}>
         <QuickLinkComponent
+          to="/api"
           title={"API & Databases"}
           image={arrow}
           description={"APIs and Database Diagrams"}
@@ -21,6 +23,7 @@ export default function QuickLinksComponent() {
       </Grid>
       <Grid item xs={12} md={6}>
         <QuickLinkComponent
+          to="/projects"
           title={"Projects"}
           image={arrow}
           description={"Projects and complied works"}
@@ -28,6 +31,7 @@ export default function QuickLinksComponent() {
       </Grid>
       <Grid item xs={12} md={6}>
         <QuickLinkComponent
+          to="/about"
           title={"About"}
           image={arrow}
           description={"Get to know Shane"}
