@@ -11,14 +11,24 @@ export function Root() {
         sx={{
           fontFamily: typography.fontFamily,
           background: `radial-gradient(circle at center, ${palette.primary.light}, ${palette.primary.main})`,
+          height: "100vh",
+          display: "flex",
+          flexDirection: "column",
         }}
       >
         <Container
           sx={{
-            backgroundImage: `url(${wireframebackground})`,
+            background: `url(${wireframebackground})`,
             backgroundRepeat: "repeat",
             backgroundSize: "cover",
-            minHeight: "100%",
+            height: "0",
+            flexGrow: 1,
+            overflowY: "auto",
+            "&::-webkit-scrollbar": {
+              display: "none", // Hide scrollbar for Chrome, Safari, and newer Edge
+            },
+            scrollbarWidth: "none", // Hide scrollbar for Firefox
+            msOverflowStyle: "none", // Hide scrollbar for IE 10+
           }}
         >
           <Header />

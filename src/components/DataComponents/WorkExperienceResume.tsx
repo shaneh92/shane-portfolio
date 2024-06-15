@@ -1,16 +1,6 @@
-import {
-  Card,
-  CardContent,
-  List,
-  ListItem,
-  ListItemIcon,
-  ListItemText,
-  Typography,
-  useTheme,
-} from "@mui/material";
+import { Card, CardContent, Typography, useTheme } from "@mui/material";
 import { resume } from "../../data/resume";
 import WorkExperienceComponent from "./WorkExperienceComponent";
-import CircleIcon from "@mui/icons-material/Circle";
 
 export default function WorkExperienceResume() {
   const { palette } = useTheme();
