@@ -50,20 +50,6 @@ function Header() {
               mr: "auto",
             }}
           >
-            <IconButton
-              size="large"
-              aria-label="account of current user"
-              aria-controls="menu-appbar"
-              aria-haspopup="true"
-              onClick={handleOpenNavMenu}
-              color="inherit"
-            >
-              <img
-                src={dropdown}
-                alt="menu"
-                style={{ height: "30px", width: "30px" }}
-              />
-            </IconButton>
             <Menu
               id="menu-appbar"
               anchorEl={anchorElNav}
@@ -150,6 +136,21 @@ function Header() {
               </Box>
             </Menu>
           </Box>
+          <IconButton
+            size="large"
+            aria-label="account of current user"
+            aria-controls="menu-appbar"
+            aria-haspopup="true"
+            onClick={handleOpenNavMenu}
+            color="inherit"
+            sx={{ display: { xs: "block", md: "none" } }}
+          >
+            <img
+              src={dropdown}
+              alt="menu"
+              style={{ height: "30px", width: "30px" }}
+            />
+          </IconButton>
 
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
             {pages.map((page) => (

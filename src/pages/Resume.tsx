@@ -28,4 +28,5 @@ export default function Resume() {
  * 5. fix education and skills card to be even at bottom
  * 6. Fix hamburger menu to be on the right side
  * 7. Fix skills list on home page to not overlap when screen shrinks
+ * 8. Implement new header links
  */
