@@ -10,7 +10,7 @@ export function Root() {
       <Paper
         sx={{
           fontFamily: typography.fontFamily,
-          background: `radial-gradient(circle at center, ${palette.primary.light}, ${palette.primary.main})`,
+          background: `radial-gradient(circle at center, #2F2E2E, ${palette.primary.main})`,
           height: "100vh",
           display: "flex",
           flexDirection: "column",
@@ -19,6 +19,7 @@ export function Root() {
         <Container
           sx={{
             background: `url(${wireframebackground})`,
+            border: `1px solid ${palette.primary.light}`,
             backgroundRepeat: "repeat",
             backgroundSize: "cover",
             height: "0",
