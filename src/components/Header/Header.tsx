@@ -5,16 +5,15 @@ import Toolbar from "@mui/material/Toolbar";
 import IconButton from "@mui/material/IconButton";
 import Menu from "@mui/material/Menu";
 import Container from "@mui/material/Container";
-import Button from "@mui/material/Button";
-import MenuItem from "@mui/material/MenuItem";
+
 import dropdown from "../../assets/dropdown.png";
 import logo from "../../assets/sh-logo.png";
-import HeaderLinkItem from "./HeaderLinkItem";
-import { Link, Typography, useTheme } from "@mui/material";
+
+import { Grid, Link, Typography, useTheme } from "@mui/material";
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-
-const pages = ["Home", "Resume", "Projects", "Databases", "API", "About"];
+import { MenuItems } from "./MenuItems";
+import HeaderLinks from "./HeaderLinks";
 
 function Header() {
   const { palette } = useTheme();
@@ -69,6 +68,7 @@ function Header() {
                 "& .MuiPaper-root": {
                   backgroundColor: palette.primary.main,
                   borderRadius: "12px",
+                  width: "300px",
                 },
               }}
             >
@@ -85,54 +85,50 @@ function Header() {
                 />
                 <Typography variant="h4">Shane Hingtgen</Typography>
               </Box>
-              <Box
-                sx={{
-                  backgroundColor: palette.secondary.main,
-                }}
-              >
-                {pages.map((page) => (
-                  <MenuItem
-                    key={page}
-                    onClick={handleCloseNavMenu}
-                    sx={{
-                      padding: "20px",
-                      pl: "30px",
-                      "&:hover": {
-                        backgroundColor: palette.primary.main,
-                      },
-                    }}
-                  >
-                    <HeaderLinkItem to={`/${page}`} title={page} />
-                  </MenuItem>
-                ))}
-              </Box>
-              <Box display="flex" alignItems="center" sx={{ margin: "20px" }}>
-                <Link
-                  href="https://github.com/shaneh92"
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="GitHub profile"
-                >
-                  <Box display="flex" alignItems="center" sx={{ mr: "25px" }}>
-                    <GitHubIcon
-                      sx={{ color: "white", mr: "10px", fontSize: 40 }}
-                    />
-                    <Typography variant="h4"> Github</Typography>
-                  </Box>
-                </Link>
-                <Link
-                  href="https://www.linkedin.com/in/shane-hingtgen/ "
-                  target="_blank"
-                  rel="noopener noreferrer"
-                  aria-label="LinkedIn profile"
-                >
-                  <Box display="flex" alignItems="center">
-                    <LinkedInIcon
-                      sx={{ color: "white", mr: "10px", fontSize: 40 }}
-                    />
-                    <Typography variant="h4">LinkedIn </Typography>
-                  </Box>
-                </Link>
+              <MenuItems />
+              <Box sx={{ margin: "25px", width: "100%" }}>
+                <Grid container alignItems="center" spacing={2}>
+                  <Grid item>
+                    <Link
+                      href="https://github.com/shaneh92"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="GitHub profile"
+                      sx={{
+                        display: "flex",
+                        alignItems: "center",
+                        textDecoration: "none",
+                      }}
+                    >
+                      <GitHubIcon
+                        sx={{ color: "white", mr: "10px", fontSize: 40 }}
+                      />
+                      <Typography variant="h4" sx={{ color: "white" }}>
+                        Github
+                      </Typography>
+                    </Link>
+                  </Grid>
+                  <Grid item>
+                    <Link
+                      href="https://www.linkedin.com/in/shane-hingtgen/"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      aria-label="LinkedIn profile"
+                      sx={{
+                        display: "flex",
+                        alignItems: "center",
+                        textDecoration: "none",
+                      }}
+                    >
+                      <LinkedInIcon
+                        sx={{ color: "white", mr: "10px", fontSize: 40 }}
+                      />
+                      <Typography variant="h4" sx={{ color: "white" }}>
+                        LinkedIn
+                      </Typography>
+                    </Link>
+                  </Grid>
+                </Grid>
               </Box>
             </Menu>
           </Box>
@@ -153,18 +149,7 @@ function Header() {
           </IconButton>
 
           <Box sx={{ flexGrow: 1, display: { xs: "none", md: "flex" } }}>
-            {pages.map((page) => (
-              <Button
-                variant="text"
-                sx={{
-                  "&:hover": {
-                    backgroundColor: palette.secondary.main,
-                  },
-                }}
-              >
-                <HeaderLinkItem to={`/${page}`} title={page} key={page} />
-              </Button>
-            ))}
+            <HeaderLinks />
           </Box>
         </Toolbar>
       </Container>

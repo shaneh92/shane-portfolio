@@ -6,12 +6,27 @@ interface QuickLinkComponentProps {
   image: string;
   description: string;
   to: string;
+  disabled?: boolean;
 }
 
 export default function QuickLinkComponent(props: QuickLinkComponentProps) {
   const { palette } = useTheme();
+
+  const handleClick = (
+    event: React.MouseEvent<HTMLAnchorElement, MouseEvent>
+  ) => {
+    if (props.disabled) {
+      event.preventDefault();
+    }
+  };
+
   return (
-    <Link component={RouterLink} to={props.to} underline="none">
+    <Link
+      onClick={handleClick}
+      component={RouterLink}
+      to={props.to}
+      underline="none"
+    >
       <Button
         sx={{
           backgroundColor: palette.secondary.main,

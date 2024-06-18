@@ -1,13 +1,13 @@
 import { Button, Link, Typography, useTheme } from "@mui/material";
 import { Link as RouterLink, useLocation } from "react-router-dom";
 
-interface HeaderLinkItemProps {
+interface MenuLinkItemProps {
   to: string;
   title: string;
   disabled?: boolean;
 }
 
-export default function HeaderLinkItem(props: HeaderLinkItemProps) {
+export default function MenuLinkItem(props: MenuLinkItemProps) {
   const location = useLocation();
   const currentPath = location.pathname || "/";
   const { palette } = useTheme();
@@ -20,13 +20,23 @@ export default function HeaderLinkItem(props: HeaderLinkItemProps) {
       sx={{
         pointerEvents: props.disabled ? "none" : "auto",
         cursor: props.disabled ? "not-allowed" : "pointer",
+        "& .MuiPaper-root": {
+          backgroundColor: palette.primary.main,
+          borderRadius: "12px",
+        },
       }}
     >
       <Button
-        variant="text"
         sx={{
+          width: "100%",
+          backgroundColor: palette.secondary.main,
+          justifyContent: "flex-start",
+          pl: "30px",
+          pt: "15px",
+          pb: "15px",
+          borderRadius: "0px",
           "&:hover": {
-            backgroundColor: palette.secondary.main,
+            backgroundColor: palette.primary.main,
           },
         }}
       >

@@ -23,10 +23,8 @@ export default function Resume() {
 /**TODO:
  * 1. Fix the font sizes for list items
  * 2. Fix the gap in SkillsResume list items
- * 3. Fix the header not highlighting when we click the buttons on the home page to navigate
- * 4. Add styles to drop down menu
- * 5. fix education and skills card to be even at bottom
- * 6. Fix hamburger menu to be on the right side
- * 7. Fix skills list on home page to not overlap when screen shrinks
- * 8. Implement new header links
+ * 3. fix education and skills card to be even at bottom
+ * 4. Fix hamburger menu to be on the right side
+ * 5. Fix skills list on home page to not overlap when screen shrinks
+ * 6. Implement new header links and fix the hamburger menu links to work for the entire button rather than just the text
  */
