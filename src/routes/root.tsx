@@ -2,6 +2,7 @@ import { Outlet } from "react-router-dom";
 import Header from "../components/Header/Header";
 import { Container, Paper, useTheme } from "@mui/material";
 import wireframebackground from "/wireframebackground.png";
+import { Footer } from "../components/Footer/Footer";
 
 export function Root() {
   const { typography, palette } = useTheme();
@@ -34,6 +35,7 @@ export function Root() {
         >
           <Header />
           <Outlet />
+          <Footer />
         </Container>
       </Paper>
     </>
