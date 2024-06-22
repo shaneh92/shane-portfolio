@@ -1,5 +1,4 @@
 import { Box, Button, Grid, Typography, useTheme } from "@mui/material";
-// import { FooterLinks } from "./FooterLinks";
 import logo from "../../assets/sh-logo.png";
 import HeaderLinkItem from "../Header/HeaderLinkItem";
 import IconLinks from "../Header/IconLinks";
@@ -11,7 +10,7 @@ export function Footer() {
       sx={{
         backgroundColor: palette.secondary.main,
         position: "relative",
-        padding: "1em",
+        padding: "2em",
       }}
     >
       <Grid container spacing={2}>
@@ -21,13 +20,13 @@ export function Footer() {
             sx={{
               display: "flex",
               alignItems: "center",
-              justifyContent: { xs: "center", sm: "flex-start" },
+              justifyContent: { xs: "center", sm: "center" },
             }}
           >
             <img
               src={logo}
               alt="logo"
-              style={{ height: "30px", width: "30px", marginRight: "20px" }}
+              style={{ height: "40px", width: "40px" }}
             />
           </Box>
         </Grid>
@@ -86,7 +85,14 @@ export function Footer() {
 
         {/* Button and Icons */}
         <Grid item xs={12} sm={3}>
-          <Box sx={{ textAlign: { xs: "center", sm: "right" } }}>
+          <Box
+            sx={{
+              display: "flex",
+              flexDirection: "column",
+              alignItems: "center",
+              textAlign: { xs: "center", sm: "center" },
+            }}
+          >
             <Button
               variant="contained"
               sx={{
@@ -99,7 +105,15 @@ export function Footer() {
             >
               Schedule a meeting
             </Button>
-            <IconLinks />
+            <Box
+              sx={{
+                display: "flex",
+                justifyContent: "center",
+                alignItems: "center",
+              }}
+            >
+              <IconLinks />
+            </Box>
           </Box>
         </Grid>
       </Grid>

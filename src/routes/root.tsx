@@ -7,37 +7,35 @@ import { Footer } from "../components/Footer/Footer";
 export function Root() {
   const { typography, palette } = useTheme();
   return (
-    <>
-      <Paper
+    <Paper
+      sx={{
+        fontFamily: typography.fontFamily,
+        background: `radial-gradient(circle at center, #2F2E2E, ${palette.primary.main})`,
+        height: "100vh",
+        display: "flex",
+        flexDirection: "column",
+      }}
+    >
+      <Container
         sx={{
-          fontFamily: typography.fontFamily,
-          background: `radial-gradient(circle at center, #2F2E2E, ${palette.primary.main})`,
-          height: "100vh",
-          display: "flex",
-          flexDirection: "column",
+          background: `url(${wireframebackground})`,
+          border: `1px solid ${palette.primary.light}`,
+          backgroundRepeat: "repeat",
+          backgroundSize: "cover",
+          height: "0",
+          flexGrow: 1,
+          overflowY: "auto",
+          "&::-webkit-scrollbar": {
+            display: "none", // Hide scrollbar for Chrome, Safari, and newer Edge
+          },
+          scrollbarWidth: "none", // Hide scrollbar for Firefox
+          msOverflowStyle: "none", // Hide scrollbar for IE 10+
         }}
       >
-        <Container
-          sx={{
-            background: `url(${wireframebackground})`,
-            border: `1px solid ${palette.primary.light}`,
-            backgroundRepeat: "repeat",
-            backgroundSize: "cover",
-            height: "0",
-            flexGrow: 1,
-            overflowY: "auto",
-            "&::-webkit-scrollbar": {
-              display: "none", // Hide scrollbar for Chrome, Safari, and newer Edge
-            },
-            scrollbarWidth: "none", // Hide scrollbar for Firefox
-            msOverflowStyle: "none", // Hide scrollbar for IE 10+
-          }}
-        >
-          <Header />
-          <Outlet />
-          <Footer />
-        </Container>
-      </Paper>
-    </>
+        <Header />
+        <Outlet />
+        <Footer />
+      </Container>
+    </Paper>
   );
 }

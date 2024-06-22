@@ -86,7 +86,13 @@ function Header() {
                 <Typography variant="h4">Shane Hingtgen</Typography>
               </Box>
               <MenuItems />
-              <IconLinks />
+              <Box
+                sx={{
+                  margin: "20px",
+                }}
+              >
+                <IconLinks />
+              </Box>
             </Menu>
           </Box>
           <IconButton

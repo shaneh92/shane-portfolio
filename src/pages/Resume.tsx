@@ -27,6 +27,6 @@ export default function Resume() {
  * 4. Fix hamburger menu to be on the right side
  * 5. Fix skills list on home page to not overlap when screen shrinks
  * 6. Implement new header links and fix the hamburger menu links to work for the entire button rather than just the text
- * 7. Fix the Footer content to look better
+ * 7. Fix the Footer content: needs to move left for even spacing in margins, and the footer needs to be the entire width of container
  * 8. Add Calendly to Schedule a meeting button
  */
