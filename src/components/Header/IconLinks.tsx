@@ -1,6 +1,6 @@
 import GitHubIcon from "@mui/icons-material/GitHub";
 import LinkedInIcon from "@mui/icons-material/LinkedIn";
-import { Box, Grid, Link, Typography } from "@mui/material";
+import { Grid, Link, Typography } from "@mui/material";
 
 export default function IconLinks() {
   return (
