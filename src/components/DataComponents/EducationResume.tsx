@@ -4,7 +4,6 @@ import { resume } from "../../data/resume.ts";
 import {
   Card,
   CardContent,
-  List,
   ListItem,
   ListItemIcon,
   Typography,

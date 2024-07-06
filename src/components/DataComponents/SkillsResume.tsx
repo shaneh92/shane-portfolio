@@ -2,7 +2,6 @@ import {
   Card,
   CardContent,
   Grid,
-  List,
   ListItem,
   ListItemIcon,
   ListItemText,
