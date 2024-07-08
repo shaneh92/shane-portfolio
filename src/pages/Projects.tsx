@@ -1,6 +1,6 @@
 import { Typography, useTheme } from "@mui/material";
 
-export default function Error() {
+export default function Projects() {
   const { palette } = useTheme();
   return (
     <>
@@ -9,7 +9,14 @@ export default function Error() {
         align="center"
         sx={{ mt: 10, color: palette.secondary.dark }}
       >
-        Uh oh, something went wrong! 404 Page Not Found!
+        This page is currently under construction!
+      </Typography>
+      <Typography
+        variant="h1"
+        align="center"
+        sx={{ mt: 10, color: palette.secondary.dark }}
+      >
+        Check back soon for updates!
       </Typography>
     </>
   );

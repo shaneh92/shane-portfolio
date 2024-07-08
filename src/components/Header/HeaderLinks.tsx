@@ -5,9 +5,9 @@ export default function HeaderLinks() {
     <>
       <HeaderLinkItem to="/home" title="Home" />
       <HeaderLinkItem to="/resume" title="Resume" />
-      <HeaderLinkItem disabled to="/projects" title="Projects" />
-      <HeaderLinkItem disabled to="/databases" title="Databases" />
-      <HeaderLinkItem disabled to="/about" title="About" />
+      <HeaderLinkItem to="/projects" title="Projects" />
+      <HeaderLinkItem to="/databases" title="Databases" />
+      <HeaderLinkItem to="/about" title="About" />
     </>
   );
 }

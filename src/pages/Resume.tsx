@@ -29,4 +29,5 @@ export default function Resume() {
  * 6. Implement new header links and fix the hamburger menu links to work for the entire button rather than just the text
  * 7. Fix the Footer content: needs to move left for even spacing in margins, and the footer needs to be the entire width of container
  * 8. Add Calendly to Schedule a meeting button
+ * 9. Make skills into a button that links to their generic webpage, IE: React will link to the React dev webpage
  */

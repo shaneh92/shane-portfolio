@@ -72,13 +72,13 @@ export function Footer() {
             justifyContent={{ xs: "center", sm: "flex-start" }}
           >
             <Grid item xs={12}>
-              <HeaderLinkItem disabled to="/api" title="API" />
+              <HeaderLinkItem to="/api" title="API" />
             </Grid>
             <Grid item xs={12}>
-              <HeaderLinkItem disabled to="/projects" title="Projects" />
+              <HeaderLinkItem to="/projects" title="Projects" />
             </Grid>
             <Grid item xs={12}>
-              <HeaderLinkItem disabled to="/databases" title="Databases" />
+              <HeaderLinkItem to="/databases" title="Databases" />
             </Grid>
           </Grid>
         </Grid>
