@@ -83,7 +83,8 @@ export const resume: Resume = {
       startDate: "September 2019",
       endDate: "Present",
       description: [
-        "Proficient in CAD to produce compliant designs that meet client specifications and regulatory standards.",
+        "Utilized CAD & ArcGIS to produce compliant designs that meet client specifications and regulatory standards.",
+        "Performed calculations to size transformers, anchors, and poles in accordance with client, local, and national code requirements.",
         "Conducted meticulous field data collection.",
         "Mentored new team members.",
       ],
@@ -97,6 +98,7 @@ export const resume: Resume = {
       description: [
         "Mentored new team members,focusing on safety protocols and productivity enhancement.",
         "Employed diagnostic tools and performance profiling to accurately identify and troubleshoot turbine malfunctions.",
+        "Installed circuit breakers, power converters, control modules, and communication devices, while also performing maintenance on slip rings, large circuit breakers, gearboxes, and generators.",
       ],
     },
   ],

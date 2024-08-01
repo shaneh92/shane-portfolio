@@ -86,22 +86,12 @@ export default function AboutComponent(props: AboutComponentProps) {
               About Me
             </Typography>
             <Typography variant="body1">
-              Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec at
-              ipsum sit amet mi convallis pharetra id
-              <span style={wordHighlight}>laoreet erat</span>. Sed ac velit sit
-              amet lorem suscipit placerat. Aliquam erat volutpat. Quisque
-              sollicitudin massa id ipsum{" "}
-              <span style={wordHighlight}>maximus consectetur</span> non eget
-              nunc. Quisque gravida{" "}
-              <span style={wordHighlight}>vestibulum</span> nisi fermentum
-              laoreet. Nam elit tortor, accumsan eu dignissim eu, mollis id
-              neque. Ut augue arcu, interdum sed ipsum ac, volutpat interdum
-              nibh. Sed{" "}
-              <span style={wordHighlight}>sagittis ullamcorper magna</span>, ac
-              vulputate turpis pharetra nec. Proin et orci sollicitudin, egestas
-              tellus et, volutpat nibh. Maecenas facilisis nunc dui, vel
-              lobortis diam feugiat sed. Nunc et eros iaculis, posuere tellus
-              non, faucibus tellus.
+              Motivated entry-level software developer with a focus on{" "}
+              <span style={wordHighlight}>Front-End Development</span>, adept at
+              crafting intuitive user interfaces. Eager to expand knowledge and
+              skills, I bring enthusiasm and dedication to collaborative team
+              environments. Actively engaged in freelance projects with a strong
+              commitment to maintaining clean and efficient code practices.
             </Typography>
           </CardContent>
         </Card>

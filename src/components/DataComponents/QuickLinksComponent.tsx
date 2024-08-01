@@ -19,7 +19,6 @@ export default function QuickLinksComponent() {
           title={"API & Databases"}
           image={arrow}
           description={"APIs and Database Diagrams"}
-          disabled
         ></QuickLinkComponent>
       </Grid>
       <Grid item xs={12} md={6}>
@@ -28,7 +27,6 @@ export default function QuickLinksComponent() {
           title={"Projects"}
           image={arrow}
           description={"Projects and complied works"}
-          disabled
         ></QuickLinkComponent>
       </Grid>
       <Grid item xs={12} md={6}>
@@ -37,7 +35,6 @@ export default function QuickLinksComponent() {
           title={"About"}
           image={arrow}
           description={"Get to know Shane"}
-          disabled
         ></QuickLinkComponent>
       </Grid>
     </Grid>
