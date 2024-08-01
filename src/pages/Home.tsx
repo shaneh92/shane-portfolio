@@ -48,7 +48,8 @@ export default function Home() {
               . Known for his team-oriented approach and precise task
               management, he is a key asset to any project, driving digital
               innovation with robust and{" "}
-              <span style={wordHighlight}>scalable</span> Angular solutions.
+              <span style={wordHighlight}>scalable</span> Angular & React
+              solutions.
             </Typography>
           </Box>
         </Grid>
