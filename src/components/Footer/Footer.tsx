@@ -95,6 +95,9 @@ export function Footer() {
           >
             <Button
               variant="contained"
+              target="_blank"
+              rel="noopener noreferrer"
+              href="https://calendly.com/shanehingtgen"
               sx={{
                 backgroundColor: palette.secondary.dark,
                 color: palette.secondary.main,
@@ -103,7 +106,7 @@ export function Footer() {
                 marginBottom: "1em",
               }}
             >
-              Schedule a meeting
+              Schedule a Meeting
             </Button>
             <Box
               sx={{
