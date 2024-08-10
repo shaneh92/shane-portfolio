@@ -1,7 +1,6 @@
 interface Education {
   school: string;
   degree: string;
-  graduationYear: string;
   awards?: string[];
 }
 
@@ -35,13 +34,11 @@ export const resume: Resume = {
     {
       school: "Bellevue University",
       degree: "B.S. in Web Development",
-      graduationYear: "2024",
       awards: ["Honor's Student Program"],
     },
     {
       school: "Kirkwood Community College",
       degree: "A.A.S. in Energy Production & Distribution Technology",
-      graduationYear: "2014",
       awards: ["Dean's List"],
     },
   ],

@@ -27,10 +27,9 @@ export default function EducationResume() {
           return (
             <ListItem disableGutters>
               <EducationComponent
-                key={`${item.school}-${item.degree}-${item.graduationYear}`}
+                key={`${item.school}-${item.degree}`}
                 school={item.school}
                 degree={item.degree}
-                graduationYear={item.graduationYear}
               />
             </ListItem>
           );

@@ -9,7 +9,6 @@ import CircleIcon from "@mui/icons-material/Circle";
 
 interface EducationComponentProps {
   school: string;
-  graduationYear: string;
   degree: string;
 }
 
@@ -29,9 +28,6 @@ export default function EducationComponent(props: EducationComponentProps) {
         <ListItemIcon>
           {/**No Icon so we are aligned with other points*/}
         </ListItemIcon>
-        <Typography variant="body1" sx={{ color: palette.secondary.dark }}>
-          {props.degree} ({props.graduationYear})
-        </Typography>
       </ListItem>
     </List>
   );
