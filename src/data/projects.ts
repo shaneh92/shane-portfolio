@@ -31,6 +31,7 @@ export const projects: Project[] = [
     projectDescription:
       "A web application for managing PC repair services, enabling work order creation and tracking. It features dedicated portals for employees and customers, secure login, robust error handling, and validation to ensure a reliable user experience. This solution streamlines repairs, enhancing efficiency and customer satisfaction.",
     projectUrl: "https://github.com/shaneh92/bcrs/tree/main",
+    appURL: "https://bcrs-4xdu.onrender.com/#/",
     isComplete: true,
     projectImage: bobsRepairShop,
     projectTechnologies: [
