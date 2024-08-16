@@ -69,7 +69,7 @@ export const projects: Project[] = [
   {
     projectName: "Old Portfolio",
     projectDescription:
-      "This portfolio showcases my earlier work, crafted using HTML, CSS, and JavaScript. It contains a comprehensive collection of my coursework, highlighting projects that shaped my foundational web development skills. Designed to be simple, functional, and easy to navigate, it offers a clear overview of my learning journey and acquired skills.",
+      "This portfolio showcases my earlier work, crafted with HTML, CSS, and JavaScript. It features a comprehensive collection of my coursework, highlighting projects that shaped my web development skills. Designed to be simple, functional, and easy to navigate, it provides a clear overview of my learning journey and acquired skills.",
     projectUrl: "https://github.com/shaneh92/personal-portfolio",
     isComplete: true,
     projectImage: oldportfolio,
