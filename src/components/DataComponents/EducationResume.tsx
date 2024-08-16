@@ -23,9 +23,12 @@ export default function EducationResume() {
           Education
         </Typography>
 
-        {resume.education.map((item) => {
+        {resume.education.map((item, index) => {
           return (
-            <ListItem disableGutters>
+            <ListItem
+              key={`${item.school}-${item.degree}-${index}`}
+              disableGutters
+            >
               <EducationComponent
                 key={`${item.school}-${item.degree}`}
                 school={item.school}
@@ -37,7 +40,7 @@ export default function EducationResume() {
 
         {resume.education.map((item, index) => {
           return (
-            <ListItem>
+            <ListItem key={`${item.school}-${index}`}>
               <ListItemIcon>
                 <CircleIcon
                   sx={{ color: palette.secondary.light, fontSize: "6px" }}

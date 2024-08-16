@@ -2,6 +2,7 @@ import {
   Card,
   CardContent,
   Grid,
+  List,
   ListItem,
   ListItemIcon,
   ListItemText,
@@ -23,21 +24,25 @@ export default function SkillsResume() {
         >
           Skills
         </Typography>
-        <Grid container spacing={2}>
-          {resume.skills.map((item, index) => (
-            <Grid item xs={12} sm={6} key={index}>
-              <ListItem>
-                <ListItemIcon>
-                  <CircleIcon
-                    sx={{ color: palette.secondary.light, fontSize: "6px" }}
-                  />
-                </ListItemIcon>
-                <ListItemText>
-                  <SkillsResumeComponent skill={item} />
-                </ListItemText>
-              </ListItem>
-            </Grid>
-          ))}
+        <Grid container justifyContent="center">
+          <Grid item>
+            <List sx={{ columnCount: 2 }}>
+              {resume.skills.map((item, index) => (
+                <Grid item sm={6} key={index}>
+                  <ListItem>
+                    <ListItemIcon>
+                      <CircleIcon
+                        sx={{ color: palette.secondary.light, fontSize: "6px" }}
+                      />
+                    </ListItemIcon>
+                    <ListItemText>
+                      <SkillsResumeComponent skill={item} />
+                    </ListItemText>
+                  </ListItem>
+                </Grid>
+              ))}
+            </List>
+          </Grid>
         </Grid>
       </CardContent>
     </Card>

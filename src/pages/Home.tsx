@@ -38,18 +38,18 @@ export default function Home() {
               variant="body1"
               sx={{ mr: "65px", textAlign: "justify" }}
             >
-              Shane is a <span style={wordHighlight}>seasoned</span> software
-              developer specializing in{" "}
-              <span style={wordHighlight}>Angular JavaScript</span>. With over
-              two years experience, Shane excels in creating{" "}
+              Shane is a <span style={wordHighlight}>Software Engineer</span>{" "}
+              specializing in{" "}
+              <span style={wordHighlight}>Front-End Development</span>. Shane
+              excels in creating{" "}
               <span style={wordHighlight}>
                 responsive, user-centric applications
               </span>
               . Known for his team-oriented approach and precise task
               management, he is a key asset to any project, driving digital
-              innovation with robust and{" "}
-              <span style={wordHighlight}>scalable</span> Angular & React
-              solutions.
+              innovation with robust and scalable{" "}
+              <span style={wordHighlight}>Angular</span> &{" "}
+              <span style={wordHighlight}>React</span> solutions.
             </Typography>
           </Box>
         </Grid>
