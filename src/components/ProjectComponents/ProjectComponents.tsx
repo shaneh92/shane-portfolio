@@ -35,7 +35,7 @@ export default function ProjectComponents(props: ProjectComponentsProps) {
         {props.projectName}
       </Typography>
 
-      <Typography>{props.projectDescription}</Typography>
+      <Typography variant="body1">{props.projectDescription}</Typography>
 
       <Box>
         <img
