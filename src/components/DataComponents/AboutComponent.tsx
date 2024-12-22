@@ -86,12 +86,16 @@ export default function AboutComponent(props: AboutComponentProps) {
               About Me
             </Typography>
             <Typography variant="body1">
-              Motivated entry-level software developer with a focus on{" "}
-              <span style={wordHighlight}>Front-End Development</span>, adept at
-              crafting intuitive user interfaces. Eager to expand knowledge and
-              skills, I bring enthusiasm and dedication to collaborative team
-              environments. Actively engaged in freelance projects with a strong
-              commitment to maintaining clean and efficient code practices.
+              Certified in <span style={wordHighlight}>CompTIA Security+</span>,
+              with expertise in developing interactive web applications using{" "}
+              <span style={wordHighlight}>React</span> and{" "}
+              <span style={wordHighlight}>TypeScript</span> to create robust,
+              scalable, and maintainable solutions. Skilled in translating Figma
+              designs into functional user interfaces, implementing custom
+              theming, field validators, and intuitive form layouts to enhance
+              user experience. Proficient in debugging and resolving issues
+              within Azure DevOps and writing comprehensive test cases with
+              Vitest to ensure software reliability.
             </Typography>
           </CardContent>
         </Card>
