@@ -9,7 +9,7 @@ import {
   Typography,
   useTheme,
 } from "@mui/material";
-import shaneResume from "../../assets/shane-hingtgen-resume2024.pdf";
+import shaneResume from "../../assets/shane-hingtgen-resume2025.pdf";
 
 interface AboutComponentProps {
   image: string;
