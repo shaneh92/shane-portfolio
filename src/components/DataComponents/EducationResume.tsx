@@ -1,5 +1,6 @@
 import EducationComponent from "./EducationComponent";
 import AwardsComponent from "./AwardsComponent.tsx";
+import CertificationComponent from "./CertificationComponent.tsx";
 import { resume } from "../../data/resume.ts";
 import {
   Card,
@@ -18,7 +19,7 @@ export default function EducationResume() {
       <CardContent>
         <Typography
           variant="h3"
-          sx={{ color: palette.secondary.light, textTransform: "capitalize" }}
+          sx={{ color: palette.secondary.dark, textTransform: "capitalize" }}
         >
           Education
         </Typography>
@@ -47,6 +48,34 @@ export default function EducationResume() {
                 />
               </ListItemIcon>
               <AwardsComponent key={index} {...item} />
+            </ListItem>
+          );
+        })}
+      </CardContent>
+      <CardContent>
+        <Typography
+          variant="h3"
+          sx={{ color: palette.secondary.dark, textTransform: "capitalize" }}
+        >
+          Certifications
+        </Typography>
+
+        {resume.certifications.map((item, index) => {
+          return (
+            <ListItem
+              key={`${item.certificationName}-${item.credentialID}-${index}`}
+              disableGutters
+            >
+              <ListItemIcon>
+                <CircleIcon
+                  sx={{ color: palette.secondary.light, fontSize: "6px" }}
+                />
+              </ListItemIcon>
+              <CertificationComponent
+                key={`${item.certificationName}-${item.credentialID}`}
+                certification={item.certificationName}
+                credentialID={item.credentialID}
+              />
             </ListItem>
           );
         })}

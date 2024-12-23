@@ -79,7 +79,7 @@ export default function AboutComponent(props: AboutComponentProps) {
             <Typography
               variant="h3"
               sx={{
-                color: palette.secondary.light,
+                color: palette.secondary.dark,
                 textTransform: "capitalize",
               }}
             >

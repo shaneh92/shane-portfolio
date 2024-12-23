@@ -3,6 +3,10 @@ interface Education {
   degree: string;
   awards?: string[];
 }
+interface Certifications {
+  certificationName: string;
+  credentialID?: string;
+}
 
 interface WorkExperience {
   company: string;
@@ -22,6 +26,7 @@ interface Resume {
   education: Education[];
   skills: string[];
   workExperience: WorkExperience[];
+  certifications: Certifications[];
 }
 
 export const resume: Resume = {
@@ -41,6 +46,13 @@ export const resume: Resume = {
       degree: "A.A.S. in Energy Production & Distribution Technology",
       awards: ["Dean's List"],
     },
+  ],
+  certifications: [
+    {
+      certificationName: "CompTIA Security+ (SY0-701)",
+      credentialID: "GDESXVXSZEVQQ29T",
+    },
+    { certificationName: "OSHA 30 General Industry and Health" },
   ],
   skills: [
     "JavaScript",

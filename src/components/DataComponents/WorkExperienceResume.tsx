@@ -9,7 +9,7 @@ export default function WorkExperienceResume() {
       <CardContent>
         <Typography
           variant="h3"
-          sx={{ color: palette.secondary.light, textTransform: "capitalize" }}
+          sx={{ color: palette.secondary.dark, textTransform: "capitalize" }}
         >
           Work Experience
         </Typography>
